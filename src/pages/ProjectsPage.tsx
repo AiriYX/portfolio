@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
@@ -44,16 +45,16 @@ const ProjectsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen peach-gradient-bg">
+    <div className="min-h-screen wheat-gradient-bg">
       <Navbar />
       
       <section className="section-container py-16">
-        <h1 className="text-4xl font-serif mb-8">My Projects</h1>
-        <p className="text-gray-700 mb-12">Here's a collection of my recent work, showcasing my skills in web development and design.</p>
+        <h1 className="text-4xl font-serif mb-8 text-navy">My Projects</h1>
+        <p className="text-navy/80 mb-12">Here's a collection of my recent work, showcasing my skills in web development and design.</p>
         
         <div className="space-y-16">
           {projects.map((project, index) => (
-            <div key={project.id} className="border-b border-gray-200 pb-16 last:border-0">
+            <div key={project.id} className="border-b border-navy/10 pb-16 last:border-0">
               <ProjectCard
                 title={project.title}
                 description={project.description}
@@ -62,7 +63,7 @@ const ProjectsPage: React.FC = () => {
               />
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="bg-white px-3 py-1 rounded-full text-sm text-gray-700 border border-gray-200">
+                  <span key={techIndex} className="bg-white px-3 py-1 rounded-full text-sm text-navy border border-navy/10">
                     {tech}
                   </span>
                 ))}

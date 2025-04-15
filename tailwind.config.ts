@@ -63,18 +63,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-        peach: {
-          100: '#FFF5F1',
-          200: '#FFE9E2',
-          300: '#FFDCD2',
-          400: '#FFC7B8',
-          500: '#FFB19E',
-        },
+        // New color palette
+        navy: "#22314E",
+        wheat: "#EFDCAA",
+        frenchgray: "#BECBDA",
+        green: "#13531B",
+        russet: "#7D451B",
+        // Default portfolio colors updated to match new palette
         portfolio: {
-          bg: '#FFF5F1',
-          accent: '#FFB19E',
-          button: '#E9A397',
-          text: '#333333',
+          bg: "#EFDCAA",
+          accent: "#13531B",
+          button: "#22314E",
+          text: "#333333",
         }
 			},
 			borderRadius: {

@@ -13,7 +13,7 @@ const Index: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen peach-gradient-bg">
+    <div className="min-h-screen wheat-gradient-bg">
       <Navbar />
       <Hero />
       
