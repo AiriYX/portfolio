@@ -2,6 +2,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Linkedin, Github } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface CourseItem {
   bullet: string;
@@ -17,24 +18,26 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-white py-16">
+    <footer className="bg-gradient-to-tr from-peach-100 to-peach-200 py-16">
       <div className="section-container">
         <div className="mb-16">
           <div className="flex items-center justify-center mb-10">
             <Separator className="w-1/3 h-px bg-gray-300" />
-            <h2 className="text-center font-serif text-xl px-4">Relevant Courseworks</h2>
+            <h2 className="text-center font-serif text-xl px-4 text-portfolio-text">Relevant Courseworks</h2>
             <Separator className="w-1/3 h-px bg-gray-300" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12 max-w-4xl mx-auto">
             {courseItems.map((item, index) => (
-              <div key={index} className="flex items-center gap-4">
-                <div className="w-4 h-4 bg-green-600 flex-shrink-0"></div>
-                <p className="text-gray-700">{item.bullet}</p>
-                <div className="flex-grow"></div>
-                <button className="bg-peach-300 hover:bg-peach-400 px-6 py-2 rounded-full text-gray-700 transition-colors">
+              <div key={index} className="flex items-center gap-4 bg-white/50 p-4 rounded-lg shadow-sm">
+                <div className="w-4 h-4 bg-portfolio-accent flex-shrink-0 rounded-full"></div>
+                <p className="text-portfolio-text flex-grow">{item.bullet}</p>
+                <Button 
+                  variant="outline" 
+                  className="bg-peach-300 hover:bg-peach-400 text-portfolio-text"
+                >
                   {item.link}
-                </button>
+                </Button>
               </div>
             ))}
           </div>
@@ -42,14 +45,14 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-200 pt-6 flex flex-col items-center">
           <div className="flex items-center mb-4">
-            <p className="text-gray-600">Made with ❤️ in NYC</p>
+            <p className="text-portfolio-text">Made with ❤️ in NYC</p>
           </div>
           <div className="flex space-x-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-              <Linkedin className="w-5 h-5 text-gray-600 hover:text-portfolio-button transition-colors" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:scale-110 transition-transform">
+              <Linkedin className="w-6 h-6 text-portfolio-text hover:text-portfolio-accent" />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-              <Github className="w-5 h-5 text-gray-600 hover:text-portfolio-button transition-colors" />
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:scale-110 transition-transform">
+              <Github className="w-6 h-6 text-portfolio-text hover:text-portfolio-accent" />
             </a>
           </div>
         </div>
