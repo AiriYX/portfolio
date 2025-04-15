@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+        peach: {
+          100: '#FFF5F1',
+          200: '#FFE9E2',
+          300: '#FFDCD2',
+          400: '#FFC7B8',
+          500: '#FFB19E',
+        },
+        portfolio: {
+          bg: '#FFF5F1',
+          accent: '#FFB19E',
+          button: '#E9A397',
+          text: '#333333',
+        }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +98,21 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+        'wave': {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(10px)' },
+        }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+        'wave': 'wave 2s ease-in-out infinite',
+			},
+      fontFamily: {
+        'serif': ['Playfair Display', 'serif'],
+        'sans': ['Inter', 'sans-serif'],
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],

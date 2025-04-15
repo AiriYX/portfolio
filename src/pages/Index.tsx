@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-const Index = () => {
+import React from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import ProjectCard from '../components/ProjectCard';
+import Skills from '../components/Skills';
+
+const Index: React.FC = () => {
+  const skills = [
+    "React", "HTML", "CSS", "JavaScript", "TypeScript", 
+    "Git", "C++", "Java", "UI/UX", "Responsive Design"
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen peach-gradient-bg">
+      <Navbar />
+      <Hero />
+      
+      <section className="section-container">
+        <ProjectCard 
+          title="PaintOn- An interactive author's tool"
+          description="An interactive application designed to streamline the authoring process with intuitive tools and features."
+          imageUrl="/lovable-uploads/c035af35-ca2c-499e-bbe9-8d5d24d2fdc7.png" 
+        />
+        
+        <ProjectCard 
+          title="PaintOn- An interactive author's tool"
+          description="An interactive application designed to streamline the authoring process with intuitive tools and features."
+          imageUrl="/lovable-uploads/c035af35-ca2c-499e-bbe9-8d5d24d2fdc7.png"
+          reverse={true}
+        />
+      </section>
+      
+      <Skills skills={skills} />
+      
+      <footer className="section-container py-6 text-center text-sm text-gray-500">
+        <div>© 2025 Airi's Portfolio. All rights reserved.</div>
+      </footer>
     </div>
   );
 };
