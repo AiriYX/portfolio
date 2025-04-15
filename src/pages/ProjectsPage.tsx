@@ -1,7 +1,7 @@
-
 import React from 'react';
 import Navbar from '../components/Navbar';
 import ProjectCard from '../components/ProjectCard';
+import Footer from '../components/Footer';
 
 interface Project {
   id: number;
@@ -72,9 +72,7 @@ const ProjectsPage: React.FC = () => {
         </div>
       </section>
       
-      <footer className="section-container py-6 text-center text-sm text-gray-500">
-        <div>© 2025 Airi's Portfolio. All rights reserved.</div>
-      </footer>
+      <Footer />
     </div>
   );
 };

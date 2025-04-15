@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import ProjectCard from '../components/ProjectCard';
 import Skills from '../components/Skills';
+import Footer from '../components/Footer';
 
 const Index: React.FC = () => {
   const skills = [
@@ -33,9 +34,7 @@ const Index: React.FC = () => {
       
       <Skills skills={skills} />
       
-      <footer className="section-container py-6 text-center text-sm text-gray-500">
-        <div>© 2025 Airi's Portfolio. All rights reserved.</div>
-      </footer>
+      <Footer />
     </div>
   );
 };
