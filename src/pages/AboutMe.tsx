@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="min-h-screen wheat-gradient-bg">
+    <div className="min-h-screen bg-[#F2E2BA]">
       <Navbar />
       
       <section className="section-container py-16">
