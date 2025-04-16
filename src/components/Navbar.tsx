@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 const Navbar: React.FC = () => {
-  return <nav className="section-container flex justify-between items-center pt-14 pb-4 py-[25px] ">
+  return (
+    <nav className="section-container flex justify-between items-center pt-14 pb-4 py-[25px]">
       <div className="flex items-center">
         <Link to="/" className="flex">
           <svg width="34" height="12" viewBox="0 0 34 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="animate-wave">
@@ -14,6 +16,8 @@ const Navbar: React.FC = () => {
         <div className="px-2 text-navy/30">|</div>
         <Link to="/about" className="text-navy hover:text-green transition-colors">About me</Link>
       </div>
-    </nav>;
+    </nav>
+  );
 };
+
 export default Navbar;
