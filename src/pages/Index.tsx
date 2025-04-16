@@ -13,11 +13,11 @@ const Index: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen wheat-gradient-bg">
+    <div className="min-h-screen bg-soft-wheat">
       <Navbar />
       <Hero />
       
-      <section className="section-container">
+      <section className="section-container relative z-10">
         <ProjectCard 
           title="PaintOn- An interactive author's tool"
           description="An interactive application designed to streamline the authoring process with intuitive tools and features."
