@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-wheat py-16 border-t border-navy/10">
+    <footer className="bg-soft-wheat py-16 border-t border-navy/10">
       <div className="section-container">
         <div className="space-y-16">
           {/* Experience Section */}
