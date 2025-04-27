@@ -2,88 +2,80 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Waves } from 'lucide-react';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#F2E2BA]">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#F2E2BA] via-[#EFDCAA] to-[#E5D5A3] pointer-events-none" />
+    <div className="min-h-screen bg-white">
       <Navbar />
       
-      <section className="relative section-container py-24">
-        <div className="max-w-6xl mx-auto px-6 md:px-10">
-          <div className="mb-16 text-center">
-            <h1 className="text-5xl font-serif mb-6 text-navy">About Me</h1>
-            <div className="w-24 h-1 bg-navy/20 mx-auto rounded-full"></div>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-12">
-            <div className="md:col-span-2 space-y-8">
-              <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-navy/10">
-                <p className="text-navy/80 leading-relaxed">
-                  I'm Airi, a computer science student at The City College of New York (CCNY) with a passion for creating 
-                  beautiful, functional web experiences. I believe in the power of technology to make a positive impact 
-                  on people's lives.
-                </p>
-              </div>
-              
-              <div className="bg-white/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-navy/10">
-                <p className="text-navy/80 leading-relaxed">
-                  My journey in computer science began when I took my first programming class in high school, 
-                  where I discovered my love for problem-solving and creating something out of nothing but code. 
-                  Since then, I've been on a continuous learning path, expanding my skills in various programming 
-                  languages and technologies.
-                </p>
-              </div>
-              
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-navy/10">
-                <p className="text-navy/80 leading-relaxed">
-                  When I'm not coding, you can find me exploring new design trends, reading about technology advancements, 
-                  or working on personal projects that challenge my creative and technical abilities.
-                </p>
-              </div>
-              
-              <div className="bg-white/40 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-navy/10 space-y-6">
-                <h2 className="text-2xl font-serif text-navy">Education</h2>
-                <div className="space-y-3">
-                  <div>
-                    <h3 className="font-medium text-navy">Bachelor of Science in Computer Science</h3>
-                    <p className="text-navy/70">The City College of New York (CCNY) | Expected 2026</p>
-                  </div>
-                </div>
-              </div>
+      <main className="max-w-5xl mx-auto px-6 pt-24 pb-32">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+          {/* Left Column */}
+          <div className="space-y-6">
+            <div className="w-64 h-64 bg-[#F2E2BA] rounded-full flex items-center justify-center text-navy text-7xl font-serif relative overflow-hidden group">
+              <span className="relative z-10">A</span>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F2E2BA] to-[#E5D5A3] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
             </div>
             
-            <div className="md:col-span-1">
-              <div className="sticky top-24 bg-white/50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-navy/10 space-y-8">
-                <div className="mb-8 flex justify-center">
-                  <div className="w-32 h-32 bg-navy rounded-full flex items-center justify-center text-wheat text-4xl font-serif transform hover:scale-105 transition-all duration-300">
-                    A
-                  </div>
-                </div>
-                
-                <div className="space-y-6">
-                  <div>
-                    <h4 className="font-medium text-navy mb-2">Location</h4>
-                    <p className="text-navy/70">New York, NY</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-navy mb-2">Focus Areas</h4>
-                    <p className="text-navy/70">Web Development, UX/UI Design, Software Development</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-navy mb-2">Languages</h4>
-                    <p className="text-navy/70">JavaScript, TypeScript, Java, C++, HTML, CSS</p>
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-navy mb-2">Contact</h4>
-                    <p className="text-navy/70">airi@example.com</p>
-                  </div>
-                </div>
+            <div className="inline-flex items-center gap-2 text-navy/60">
+              <Waves className="w-5 h-5" />
+              <span>Currently in New York</span>
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="space-y-12">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-navy mb-8">
+                Hello, I'm Airi
+              </h1>
+              <p className="text-lg text-navy/70 leading-relaxed">
+                A computer science student at The City College of New York (CCNY) with a passion for creating 
+                beautiful, functional web experiences. I believe in the power of technology to make a positive impact 
+                on people's lives.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-serif text-navy/80 mb-4">What I Do</h2>
+              <p className="text-navy/70 leading-relaxed">
+                My journey in computer science began with my first programming class in high school, 
+                where I discovered my love for problem-solving and creating something out of nothing but code. 
+                When I'm not coding, you can find me exploring new design trends or working on personal projects.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="text-xl font-serif text-navy/80 mb-4">Technical Focus</h2>
+              <div className="flex flex-wrap gap-3">
+                {["JavaScript", "TypeScript", "React", "Java", "C++", "UI/UX Design"].map((skill, index) => (
+                  <span 
+                    key={index} 
+                    className="px-4 py-2 bg-[#F2E2BA]/30 text-navy/70 rounded-full text-sm"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
+            </div>
+
+            <div className="pt-4">
+              <h2 className="text-xl font-serif text-navy/80 mb-4">Get in Touch</h2>
+              <a 
+                href="mailto:airi@example.com" 
+                className="inline-flex items-center gap-2 text-navy hover:text-green transition-colors"
+              >
+                airi@example.com
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M8 12H16M16 12L12 8M16 12L12 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-      </section>
+      </main>
       
       <Footer />
     </div>
