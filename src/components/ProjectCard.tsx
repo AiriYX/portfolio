@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useScrollPosition } from '../hooks/useScrollPosition';
 
 interface ProjectCardProps {
   title: string;
@@ -14,8 +15,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   imageUrl,
   reverse = false
 }) => {
+  const hasScrolledPastThreshold = useScrollPosition();
+
   return (
-    <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 bg-white/30 rounded-2xl p-8 backdrop-blur-sm border border-navy/10 hover:shadow-lg transition-all duration-300`}>
+    <div className={`flex flex-col ${reverse ? 'md:flex-row-reverse' : 'md:flex-row'} gap-8 bg-white/30 rounded-2xl p-8 backdrop-blur-sm border border-navy/10 ${hasScrolledPastThreshold ? 'shadow-lg -translate-y-2' : ''} transition-all duration-300 hover:shadow-lg hover:-translate-y-2`}>
       <div className="md:w-1/2 flex items-center">
         <div className="space-y-4">
           <h3 className="text-2xl font-serif font-medium text-navy">{title}</h3>
