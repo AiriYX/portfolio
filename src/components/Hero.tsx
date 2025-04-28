@@ -1,32 +1,12 @@
-
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
-import { useScrollPosition } from '../hooks/useScrollPosition';
 
 const Hero: React.FC = () => {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-  const hasScrolledPastThreshold = useScrollPosition();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current && !hasScrolledPastThreshold) {
-        const scrollPosition = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.4}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [hasScrolledPastThreshold]);
-
   return (
     <section className="relative overflow-hidden pt-20 pb-24">
       <div 
-        ref={parallaxRef}
-        className={`absolute inset-0 -z-10 bg-soft-wheat opacity-70 transition-all duration-300 ${
-          hasScrolledPastThreshold ? 'transform-none' : ''
-        }`}
+        className="absolute inset-0 -z-10 bg-soft-wheat opacity-70"
         style={{ 
           backgroundImage: 'url("/lovable-uploads/c035af35-ca2c-499e-bbe9-8d5d24d2fdc7.png")',
           backgroundSize: 'cover',
