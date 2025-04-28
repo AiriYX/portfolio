@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -74,7 +73,11 @@ export default {
           accent: "#13531B",
           button: "#22314E",
           text: "#333333",
-        }
+        },
+        'page-bg': '#FFFAEB',
+        'header': '#0A2342',
+        'card-bg': '#FFFDF5',
+        'body-text': '#333333',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -101,16 +104,22 @@ export default {
         'wave': {
           '0%, 100%': { transform: 'translateX(0)' },
           '50%': { transform: 'translateX(10px)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'wave': 'wave 2s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-out'
       },
       fontFamily: {
         'serif': ['Playfair Display', 'serif'],
         'sans': ['Inter', 'sans-serif'],
+        'nunito': ['Nunito', 'sans-serif'],
       }
     }
   },

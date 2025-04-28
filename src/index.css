@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
 
@@ -49,11 +49,11 @@
   }
 
   body {
-    @apply bg-soft-wheat text-navy font-sans tracking-wide;
+    @apply bg-[#FFFAEB] text-[#333333] font-nunito tracking-wide;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-navy tracking-wide;
+    @apply font-nunito text-[#0A2342] tracking-wide font-bold;
   }
 
   .portfolio-pill {
@@ -84,4 +84,3 @@
     @apply relative z-10;
   }
 }
-
