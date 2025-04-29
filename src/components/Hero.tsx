@@ -15,6 +15,8 @@ const Hero: React.FC = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Apply initial transform on component mount
+    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
