@@ -1,35 +1,22 @@
-
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import nyc from './util/img/nyc.jpg';
 
 const Hero: React.FC = () => {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        const scrollPosition = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.4}px)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <section className="relative overflow-hidden pt-20 pb-24">
       <div 
-        ref={parallaxRef}
-        className="absolute inset-0 -z-10 bg-soft-wheat opacity-70"
+        className="absolute inset-0 -z-10 bg-soft-wheat opacity-70" 
         style={{ 
-          backgroundImage: 'url("/lovable-uploads/c035af35-ca2c-499e-bbe9-8d5d24d2fdc7.png")',
+          backgroundImage: `url(${nyc})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           filter: 'blur(8px) brightness(1.2)'
         }}
-      />
+      >
+        {}
+        </div>
       <div className="section-container relative z-10">
         <div className="max-w-2xl backdrop-blur-sm bg-white/30 p-8 rounded-xl">
           <div className="flex items-center gap-4 mb-4">
