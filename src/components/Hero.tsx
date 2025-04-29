@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
     const handleScroll = () => {
       if (parallaxRef.current) {
         const scrollPosition = window.scrollY;
-        parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+        parallaxRef.current.style.transform = `translateY(${scrollPosition * 0.3}px)`;
       }
     };
 
@@ -22,12 +22,14 @@ const Hero: React.FC = () => {
     <section className="relative overflow-hidden pt-20 pb-24">
       <div 
         ref={parallaxRef}
-        className="absolute inset-0 -z-10 bg-soft-wheat opacity-70"
+        className="absolute inset-0 -z-10"
         style={{ 
           backgroundImage: 'url("/lovable-uploads/c035af35-ca2c-499e-bbe9-8d5d24d2fdc7.png")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'blur(8px) brightness(1.2)'
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.9,
+          filter: 'blur(6px) brightness(1.1)'
         }}
       />
       <div className="section-container relative z-10">
